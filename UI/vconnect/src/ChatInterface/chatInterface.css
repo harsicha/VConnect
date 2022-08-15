@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html * {
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+    font-weight: 400;
+}
+
+.chat {
+    width: 300px;
+    height: 600px;
+    background-color: darkcyan;
+}
+
+.acUsers {
+    width: 300px;
+    height: 300px;
+    background-color: darkcyan;
+}
+
+.chat {
+    width: 600px;
+    height: 400px;
+    background-color: darkcyan;
+    display: flex;
+}
+
+.window {
+    /* margin: auto; */
+    width: 570px;
+    height: 370px;
+    background-color: #faedcd;
+    /* align-self: center; */
+}
+
+.chatWindow {
+    width: 570px;
+    height: 350px;
+    overflow-y: scroll;
+    padding-bottom: 2px;
+}
+
+.chatText {
+    height: fit-content;
+    max-width: 400px;
+    width: min-content;
+    overflow-wrap: break-word;
+    background-color: lightyellow;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    margin: 5px 10px;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.inputWindow {
+    width: 570px;
+    height: 32px;
+    /* background-color: #faedcd; */
+}
+
+#inputMain {
+    background-color: aliceblue !important;
+    width: 500px;
+    border: 2px solid darkcyan;
+    resize: none;
+}
+
+.sendButton {
+    border-radius: 50px;
+    border: 2px solid darkcyan;
+    height: 32px;
+    width: 60px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sendButton:hover {
+    opacity: 90%;
+}
+
+.sendButton:focus {
+    opacity: 80%;
+}
+
+.friendsPanel {
+    width: 100%;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.1fr 1fr 1fr;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#inputFriend {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin-right: 2px;
+    max-width: 150px;
+    border: 2px solid darkcyan;
+    height: 2rem;
+}
+
+.searchButton {
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    margin-right: 2px;
+}
+
+.friendsButton {
+    margin-right: 2px;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+}
+
+.friendReqButton {
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+}
+
+.friendRequests {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1faee;
+    width: 100%;
+    height: 100vh;
+    opacity: 90%;
+}
+
+.friends {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1faee;
+    width: 100%;
+    height: 100vh;
+    opacity: 90%;
+}
+
+.onlineLi {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.setFriend {
+    justify-self: end;
+}
+
+.closeButton {
+    margin-left: calc(100% - 55.09px);
+    margin-top: 10px;
+}
+
+@keyframes lightUp {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 90%;
+    }
+}
+
+.sentRequests,
+.onlineFriends ul {
+    list-style: none;
+    padding-right: 50px;
+}
+
+.sentRequests,
+.onlineFriends p {
+    padding-left: 10px;
+}
+
+.sentRequests,
+.onlineFriends hr {
+    margin: 0 5px;
+}
+
+.pendingRequests,
+.offlineFriends ul {
+    list-style: none;
+    padding-right: 50px;
+}
+
+.pendingRequests,
+.offlineFriends p {
+    padding-left: 10px;
+}
+
+.pendingRequests,
+.offlineFriends hr {
+    margin: 0 5px;
+}
+
+.notExistNotif {
+    z-index: 20;
+    position: absolute;
+    top: 60vh;
+    left: 35vw;
+    background-color: #f1faee;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.sendRequestPopUp {
+    z-index: 10;
+    background-color: #f1faee;
+    opacity: 90%;
+    animation-name: lightUp;
+    animation-duration: 0.5s;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.5fr 1.1fr;
+    width: 75vw;
+    height: 80px;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px black;
+    margin: auto;
+}
+
+.sendRequestPopUp button {
+    margin-bottom: auto;
+    width: fit-content;
+    justify-self: end;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.sendRequestPopUp span:nth-of-type(1) {
+    justify-self: end;
+    margin-top: 5px;
+}
+
+.sendRequestPopUp span {
+    padding-left: 15px;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.requestsLi {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.requestsBT {
+    justify-self: end;
+}
+
+.friendNotSelected {
+    display: flex;
+    justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border: solid 1px darkcyan;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkcyan;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media screen and (min-width: 450px) {
+    .sendRequestPopUp {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .acUsers {
+        height: 17vh;
+    }
+
+    .chat,
+    .chatWindow,
+    .window {
+        height: 80vh;
+        width: 100%;
+        background-color: #faedcd;
+        border-radius: 10px;
+        padding-top: 1px;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .inputWindow {
+        width: calc(100% - 5px);
+        padding-bottom: 5px;
+        padding-left: 5px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #inputMain {
+        width: calc(92% - 47.14px);
+        border-radius: 50px;
+        height: 24px;
+        margin-right: 10px;
+        text-align: left;
+        padding-left: 10px;
+        outline: none;
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 550px) {
+
+        .notExistNotif {
+            left: 45vw;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chatText {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .chatText {
+        max-width: 200px;
+    }
+
+    .friendReqButton {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .chat,
+    .chatWindow,
+    .window {
+        height: 80vh;
+        width: 100%;
+        background-color: #faedcd;
+        border-radius: 10px;
+        padding-top: 1px;
+        max-width: 700px;
+        margin: auto;
+        padding-right: 0.5px;
+    }
+
+    .inputWindow {
+        width: calc(100% - 5px);
+        padding-bottom: 5px;
+        padding-left: 5px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #inputMain {
+        width: calc(92% - 47.14px);
+        border-radius: 50px;
+        height: 24px;
+        margin-right: 10px;
+        text-align: left;
+        padding-left: 10px;
+        outline: none;
+        font-size: 18px;
+    }
+
+    .friendRequests {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 80vw;
+        background-color: #f1faee;
+        width: 20%;
+        height: 100vh;
+        opacity: 90%;
+    }
+
+    .friends {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #f1faee;
+        width: 20%;
+        height: 100vh;
+        opacity: 90%;
+    }
+
+    .notExistNotif {
+        left: 45vw;
+    }
+
+    @media screen and (min-width: 1600px) {
+
+        .chat,
+        .chatWindow,
+        .window {
+            height: 80vh;
+            width: 100%;
+            background-color: #faedcd;
+            border-radius: 10px;
+            padding-top: 1px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .inputWindow {
+            width: calc(100% - 5px);
+            padding-bottom: 5px;
+            padding-left: 5px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #inputMain {
+            width: calc(92% - 47.14px);
+            border-radius: 50px;
+            height: 24px;
+            margin-right: 10px;
+            text-align: left;
+            padding-left: 10px;
+            outline: none;
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (min-width: 1800px) {
+
+        .chat,
+        .chatWindow,
+        .window {
+            height: 80vh;
+            width: 100%;
+            background-color: #faedcd;
+            border-radius: 10px;
+            padding-top: 1px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .inputWindow {
+            width: calc(100% - 5px);
+            padding-bottom: 5px;
+            padding-left: 5px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #inputMain {
+            width: calc(92% - 47.14px);
+            border-radius: 50px;
+            height: 24px;
+            margin-right: 10px;
+            text-align: left;
+            padding-left: 10px;
+            outline: none;
+            font-size: 18px;
+        }
+    }
+}

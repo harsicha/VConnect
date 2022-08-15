@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #1d3557;
+}
+
+input {
+    all: unset;
+}
+
+.auth {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 5vh;
+    border: 3px solid #219ebc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #219ebc;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+}
+
+.login {
+    height: 15rem;
+    background-color: #fb8500;
+    display: grid;
+}
+
+.register {
+    height: 17rem;
+    background-color: #fb8500;
+    display: grid;
+}
+
+#loginForm {
+    padding-top: 3rem;
+    display: table;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-self: center;
+}
+
+#RegisterForm {
+    padding-top: 2rem;
+    display: table;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    justify-self: center;
+}
+
+.submit {
+    margin-top: 0.5vh;
+    justify-self: center;
+    width: 5rem;
+    height: 2rem;
+    background-color: #1d3557;
+    color: #ffb703;
+    border-radius: 5rem;
+    box-shadow: 0 0 7px 1px #1d3557;
+}
+
+.submit:disabled {
+    opacity: 80%;
+}
+
+.submit:hover:enabled {
+    opacity: 90%;
+}
+
+.inputBox {
+    display: table-row;
+    justify-self: center;
+    height: 1rem;
+    background-color: #f1faee;
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid #d5bdaf;
+    border-radius: 5rem;
+    text-align: start;
+    padding-left: 1rem;
+}
+
+.inputBox::placeholder {
+    text-align: start;
+}
+
+.inputBox:focus {
+    box-shadow: 0 0 7px 1px #f1faee;
+}
+
+.lbl {
+    display: table-row;
+    align-self: center;
+    font-size: min(max(2vw, 18px), 20px);
+}
+
+.spanText {
+    align-self: center;
+}
+
+.toggleButton {
+    width: 50%;
+    height: 2.5rem;
+
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    background-color: #ffb703;
+}
+
+.buttonBorderLeft {
+    border-right: 1px solid #023047;
+    border-bottom: 2px solid #023047;
+}
+
+.buttonBorderRight {
+    border-left: 1px solid #023047;
+    border-bottom: 2px solid #023047;
+}
+
+.buttonBorderLeft:hover {
+    /* border-right: 2px solid #023047;
+    border-bottom: 3px solid #023047; */
+    box-shadow: 0 3px 10px 0.1px #023047;
+}
+
+.buttonBorderRight:hover {
+    /* border-left: 2px solid #023047;
+    border-bottom: 3px solid #023047; */
+    box-shadow: 0 3px 10px 0.1px #023047;
+}
+
+.selectedLeft {
+    /* border-right: 2px solid #023047;
+    border-bottom: 3px solid #023047; */
+    box-shadow: 0 3px 10px 0.1px #023047;
+}
+
+.selectedRight {
+    /* border-left: 2px solid #023047;
+    border-bottom: 3px solid #023047; */
+    box-shadow: 0 3px 10px 0.1px #023047;
+}
