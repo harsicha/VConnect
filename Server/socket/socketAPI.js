@@ -26,7 +26,6 @@ function socketAPI(io) {
             if (!activeUsers.has(resipientUsername)) {
                 io.to(socket.id).emit("private message", "User is Offline!");
             } else {
-                //console.log('Message: ' + msg + ", sent to " + resipientUsername);
                 io.to(activeUsers.get(resipientUsername)).emit("private message", socket.username, msg);
             }
         });
