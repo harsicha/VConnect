@@ -56,7 +56,6 @@ function App() {
         socket.on("getActiveUsers", (data) => {
             activeUsers.current = [];
             activeUsers.current.push(...data);
-            //console.log(data);
         });
 
         socket.on("private message", (senderUsername, msg) => {
@@ -76,7 +75,6 @@ function App() {
         }
 
         socket.on("user status", (user, msg) => {
-            //console.log("status msg: " + msg + " and username is " + usernameRef.current);
             if (usernameRef.current && usernameRef.current === user && !msg) setIsAllow(true);
         });
 
@@ -100,7 +98,6 @@ function App() {
 
         socket.on("show requests response", (response) => {
             if (response && response.sentRequests && response.pendingRequests) {
-                //console.log("show requests response: " + response.pendingRequests);
                 requestsRef.current = response;
             }
         });
@@ -112,7 +109,6 @@ function App() {
 
     useEffect(() => {
         // Add the user to the map of users at the backend
-        //.log(usernameGL);
         usernameRef.current = usernameGL;
         if (usernameGL) {
             socket.emit("check user active", usernameGL);
@@ -120,7 +116,6 @@ function App() {
     }, [usernameGL]);
 
     useEffect(() => {
-        //console.log(isAllow);
         if (isAllow) socket.emit("new user", usernameGL);
 
         // First call to getActiveUsers when the user is allowed to access
@@ -226,9 +221,7 @@ function App() {
     }
 
     function friends() {
-        //socket.emit("getActiveUsers");
         socket.emit("show friends");
-        //console.log(activeUsers.current.length);
         return (
             <div className="friends" style={friendsBT ? { display: 'block', animationName: 'lightUp', animationDuration: '0.5s' } : { display: 'none' }}>
                 <button className="closeButton" onClick={() => toggleFriends()}>Close</button>
