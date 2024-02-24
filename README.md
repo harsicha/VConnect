@@ -4,3 +4,10 @@ Features:
 1. Friends Management
 2. Authentication
 3. Chat using WebSockets
+
+## Languages & Tools used
+- JavaScript
+- Express
+- Node
+- React
+- MongoDB
